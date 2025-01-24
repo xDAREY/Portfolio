@@ -21,9 +21,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text glowing-text">
             Oluwadare Emmanuel
           </h1>
+
           <p className="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300">
             Flutter & Web Developer
           </p>
@@ -75,4 +76,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

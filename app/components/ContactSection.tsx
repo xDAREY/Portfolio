@@ -53,12 +53,12 @@ export default function ContactSection() {
         >
           Get in Touch
         </motion.h2>
-        <div className="flex flex-col md:flex-row gap-12">
+        <div className="flex justify-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:w-1/2"
+            className="w-full md:w-1/2 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
