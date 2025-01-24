@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { FaCode, FaMobile, FaServer, FaDesktop } from "react-icons/fa"
+import { motion } from "framer-motion";
+import { FaCode, FaMobile, FaServer, FaDesktop, FaEthereum } from "react-icons/fa";
 
 const services = [
- {
+  {
     title: "Mobile App Development",
     description:
       "Creating robust and user-friendly mobile applications using Flutter for both iOS and Android platforms.",
@@ -12,22 +12,29 @@ const services = [
   },
   {
     title: "Web Development",
-    description: "I design and build beautiful websites with React, NextJS, TailwindCSS, Typescript, and JavaScript that work on every type of browser including Safari, Chrome, Firefox, Brave, etc.",
+    description:
+      "I design and build beautiful websites with React, NextJS, TailwindCSS, Typescript, and JavaScript that work seamlessly across all major browsers.",
     icon: FaDesktop,
   },
   {
     title: "API Integrations",
     description:
-      "Integrating backend services and APIs to the frontend securely to fetch and display data in real time.",
+      "Integrating backend services and APIs to the frontend securely to fetch and display data in real-time.",
     icon: FaServer,
   },
   {
     title: "Version Control & Collaboration",
-    description: "Working with tools like Git and Github for version control and ease of collaborating on projects.",
+    description:
+      "Working with tools like Git and Github for version control and seamless collaboration on projects.",
     icon: FaCode,
   },
- 
-]
+  {
+    title: "Web3 Development",
+    description:
+      "I specialize in building centralized trading platforms that enable secure and efficient trading of assets such as cryptocurrencies, stocks, and forex. My expertise spans designing intuitive UIs, implementing real-time data updates, and ensuring robust security measures.",
+    icon: FaEthereum,
+  },
+];
 
 export default function ServicesSection() {
   return (
@@ -58,6 +65,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

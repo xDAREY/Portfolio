@@ -6,11 +6,19 @@ import { FaEye, FaGithub } from "react-icons/fa";
 
 const webProjects = [
   {
+    title: "xDareyCoinHub",
+    description:
+      "A centralized asset trading platform ranging between crypto, forex and stocks market.",
+    livePreview: "https://xdarey-coinhub.vercel.app",
+    github: "https://github.com/xDAREY/xDareyCoinHub",
+    tools: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
     title: "Customer-Support Agent Platform",
     description:
       "The Customer-Support Agent Platform is a web-based solution designed to streamline customer support operations by providing agents with intuitive tools to manage inquiries, track conversations, and resolve issues efficiently.",
-    livePreview: "https://elearning-example.com",
-    github: "https://github.com/example/customer-support",
+    livePreview: "https://mycustomer-support-agent.vercel.app",
+    github: "https://github.com/xDAREY/customer-support-agent-",
     tools: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
