@@ -21,7 +21,7 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+      <nav className="container mx-auto px-6 sm:px-12 py-3 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">
           xDarey
         </Link>
@@ -40,4 +40,3 @@ export default function Header() {
     </motion.header>
   )
 }
-

@@ -11,17 +11,35 @@ export default function ContactSection() {
     message: "",
   })
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false)
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prevState) => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here (e.g., send data to an API)
-    console.log("Form submitted:", formData)
-    // Reset form after submission
-    setFormData({ name: "", email: "", message: "" })
+
+    try {
+      const response = await fetch("https://getform.io/f/bejjwoea", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setFormData({ name: "", email: "", message: "" }) // Clear the form
+        setIsPopupVisible(true) // Show popup
+      } else {
+        alert("Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("An error occurred. Please try again.")
+    }
   }
 
   return (
@@ -93,47 +111,26 @@ export default function ContactSection() {
               </button>
             </form>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:w-1/2 flex flex-col justify-center"
-          >
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Connect with me</h3>
-            <div className="space-y-4">
-              <a
-                href="https://github.com/xDAREY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                <FaGithub className="mr-2" /> GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/oluwadare-emmanuel-4a0b75270"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                <FaLinkedin className="mr-2" /> LinkedIn
-              </a>
-              <a
-                href="mailto:your.email@example.com"
-                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                <FaEnvelope className="mr-2" /> Gmail
-              </a>
-              <a
-                href="tel:+2349036113191"
-                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                <FaPhone className="mr-2" /> Phone No.
-              </a>
-            </div>
-          </motion.div>
         </div>
       </div>
+
+      {/* Popup */}
+      {isPopupVisible && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center space-y-4">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white">Message Sent</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Thank you for reaching out. We will get back to you as soon as possible.
+            </p>
+            <button
+              onClick={() => setIsPopupVisible(false)}
+              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+            >
+              Okay
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
-
