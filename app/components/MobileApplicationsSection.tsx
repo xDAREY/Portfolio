@@ -9,19 +9,19 @@ const mobileProjects = [
     title: "Pettify Mobile",
     description:
       "A fully functional pet e-commerce mobile application built with Dart and Flutter.",
-    videoPreview: "/ecommerce-app-preview.mp4",
+    videoPreview: "/app-preview.mp4",
   },
   {
     title: "Flex Mobile",
     description:
       "A comprehensive travel and event management platform that simplifies planning vacations, booking attraction tickets, securing accommodations, and arranging transportation for users.",
-    videoPreview: "/fitness-app-preview.mp4",
+    videoPreview: "/app-preview.mp4",
   },
   {
     title: "Authentication App",
     description:
       "A basic authentication test app that validates user registration details, redirects successful signups to the homepage, and prompts re-login for incorrect inputs.",
-    videoPreview: "/fitness-app-preview.mp4",
+    videoPreview: "/app-preview.mp4",
     githubLink: "https://github.com/xDAREY/Authentication-app",
     tools: ["JAVA", "XML", "SQLite"],
   },
@@ -29,7 +29,7 @@ const mobileProjects = [
     title: "Type It",
     description:
       "A mobile game test that tests your typing speed. It is a very simple project and the user does not need to worry much as it helps in building how fast they can type on a mobile device. Let us call it a mobile 'mavins beacon'.",
-    videoPreview: "/fitness-app-preview.mp4",
+    videoPreview: "/app-preview.mp4",
     githubLink: "https://github.com/xDAREY/TypeIT",
     tools: ["JAVA", "XML"],
   },
@@ -37,7 +37,7 @@ const mobileProjects = [
     title: "Quiz-app",
     description:
       "This is an IQ game built for fun & nothing more. In the process of building it for the android platform various widgets were imported such as Timer, color, toast & various more. Special fonts were also added to the resource file.",
-    videoPreview: "/fitness-app-preview.mp4",
+    videoPreview: "/app-preview.mp4",
     githubLink: "https://github.com/xDAREY/TypeIT",
     tools: ["JAVA", "XML"],
   },

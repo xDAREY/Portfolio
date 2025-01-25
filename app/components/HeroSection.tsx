@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaLinkedin, FaWhatsapp, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export default function HeroSection() {
   // Function to track the button click
@@ -89,6 +89,13 @@ export default function HeroSection() {
             rel="noopener noreferrer"
           >
             <FaTwitter className="text-3xl text-gray-600 hover:text-blue-400 transition-colors" />
+          </a>
+          <a
+            href="mailto:oluwadare.emmanuel15@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelope className="text-3xl text-gray-600 hover:text-red-500 transition-colors" />
           </a>
         </motion.div>
       </div>
