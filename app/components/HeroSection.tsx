@@ -4,6 +4,24 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaWhatsapp, FaTwitter } from "react-icons/fa";
 
 export default function HeroSection() {
+  // Function to track the button click
+  const handleDownloadClick = async () => {
+    try {
+      await fetch("https://submit-form.com/xxj8UpSvR", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event: "Resume Download",
+          timestamp: new Date().toISOString(),
+          page: window.location.href,
+        }),
+      });
+      console.log("Resume download tracked successfully.");
+    } catch (error) {
+      console.error("Error tracking resume download:", error);
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -38,6 +56,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors"
+            onClick={handleDownloadClick} // Add click handler
           >
             Download Resume 📄
           </motion.a>
