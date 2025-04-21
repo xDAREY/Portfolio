@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaWhatsapp, FaTwitter, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 
 export default function HeroSection() {
+  const [showResume, setShowResume] = useState(false);
+  
   const handleDownloadClick = async () => {
     try {
       await fetch("https://submit-form.com/xxj8UpSvR", {
@@ -19,6 +22,10 @@ export default function HeroSection() {
     } catch {
       // silent fail
     }
+  };
+
+  const toggleResumeViewer = () => {
+    setShowResume(!showResume);
   };
 
   return (
@@ -63,15 +70,14 @@ export default function HeroSection() {
             Download Resume 📄
           </motion.a>
 
-          <Link href="#resume-viewer">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-blue-500 text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-500/10 transition-colors"
-            >
-              View Resume
-            </motion.button>
-          </Link>
+          <motion.button
+            onClick={toggleResumeViewer}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="border border-blue-500 text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-500/10 transition-colors"
+          >
+            {showResume ? "Hide Resume" : "View Resume"}
+          </motion.button>
         </div>
       </motion.div>
 
@@ -101,27 +107,35 @@ export default function HeroSection() {
         ))}
       </motion.div>
 
-      {/* Resume Viewer */}
-      <div id="resume-viewer" className="w-full flex justify-center px-4 mb-12">
-        <object
-          data="/resume.pdf"
-          type="application/pdf"
-          width="100%"
-          height="600px"
-          className="rounded-lg shadow-lg"
+      {/* Resume Viewer - Only shown when showResume is true */}
+      {showResume && (
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          id="resume-viewer" 
+          className="w-full flex justify-center px-4 mb-12"
         >
-          <p className="text-gray-400">
-            It looks like your browser doesn’t support embedded PDFs.{" "}
-            <a
-              href="/resume.pdf"
-              download="Oluwadare_Emmanuel_Resume.pdf"
-              className="text-blue-500 hover:underline"
-            >
-              Click here to download the resume.
-            </a>
-          </p>
-        </object>
-      </div>
+          <object
+            data="/resume.pdf"
+            type="application/pdf"
+            width="100%"
+            height="600px"
+            className="rounded-lg shadow-lg"
+          >
+            <p className="text-gray-400">
+              It looks like your browser doesn't support embedded PDFs.{" "}
+              <a
+                href="/resume.pdf"
+                download="Oluwadare_Emmanuel_Resume.pdf"
+                className="text-blue-500 hover:underline"
+              >
+                Click here to download the resume.
+              </a>
+            </p>
+          </object>
+        </motion.div>
+      )}
     </section>
   );
 }
