@@ -1,36 +1,17 @@
-import Head from 'next/head'; // Correct import
+import { Metadata } from 'next'
+import HeroSection from "./(portfolio)/components/HeroSection"
+import NavigationBar from "./(portfolio)/components/navigationBar"
 
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import SkillsSection from "./components/SkillsSection";
-import ExperienceSection from "./components/ExperienceSection";
-import ServicesSection from "./components/ServicesSection";
-import MobileApplicationsSection from "./components/MobileApplicationsSection";
-import WebDevelopmentSection from "./components/WebDevelopmentSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+export const metadata: Metadata = {
+  title: 'Oluwadare Emmanuel | Flutter & Web Developer',
+  description: 'Portfolio for Oluwadare Emmanuel, Flutter and Web Developer specializing in creating beautiful, functional applications.',
+}
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
-      <Header />
+      <NavigationBar />
       <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ServicesSection />
-      <MobileApplicationsSection />
-      <WebDevelopmentSection />
-      <ContactSection />
-      <Footer />
     </main>
-  );
+  )
 }

@@ -1,9 +1,8 @@
 "use client";
 
 import { Montserrat } from "next/font/google";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeProvider } from "./(portfolio)/components/ThemeProvider";
 import "./globals.css";
-import Head from "next/head";
 import { useEffect } from "react";
 import { sendIpDetails } from "./utils/fetchIp";
 
@@ -25,16 +24,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, []);
 
   return (
-    <html lang="en">
-      <Head>
+    <html lang="en" suppressHydrationWarning>
+      <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-      </Head>
-      <body className={montserrat.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      </head>
+      <body className={`${montserrat.className} bg-black text-white dark:bg-black dark:text-white`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>
