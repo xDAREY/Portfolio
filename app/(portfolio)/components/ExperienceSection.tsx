@@ -8,28 +8,35 @@ const experiences = [
     company: "Pettify (Start-up)",
     period: "May 2024 - Present",
     description:
-      "Engineered core features for a Flutter-based pet e-commerce app, enabling pet adoption, accessories shopping, and offline cart functionality. Integrated Firebase services, OpenCage API for address autocomplete, and implemented token-based session validation. Led UI/UX theming and caching strategies for better performance and user retention.",
+      "Architected and developed core features for a pet e-commerce mobile application using Flutter/Dart, encompassing pet adoption workflows, accessories marketplace, and dynamic cart management systems. Implemented comprehensive authentication and data persistence infrastructure using Firebase Auth and Firestore, with secure local storage solutions for seamless offline functionality. Engineered robust state management architecture using Riverpod and delivered advanced UX features including lifecycle-aware splash screens and intelligent address auto-complete powered by OpenCage API.",
+  },
+  {
+    title: "Software Engineer",
+    company: "HNG",
+    period: "Jan 2025 - Mar 2025",
+    description:
+      "Architected multiple high-performance mobile applications including a Country Info App with real-time API integration and 3D Controlla, a 3D model viewer supporting animation playback using Flutter. Collaborated on Telex, a real-time messaging application, engineering WebSocket handler using Centrifugo to manage client connections and channel subscriptions, achieving reliable message delivery and low-latency communication. Participated in agile development cycles with weekly code reviews and sprint demos.",
   },
   {
     title: "Mobile Developer",
     company: "Flex",
-    period: "Jan 2023 - May 2023",
+    period: "Jan 2022 - Feb 2024",
     description:
-      "Built a mobile application in Java/XML for discovering leisure events, booking tickets, and goal-setting. Translated design prototypes into intuitive Material UI, integrated RESTful APIs, and ensured functionality with JUnit and cross-device testing. Collaborated closely with the backend team using Git-based workflows.",
+      "Architected comprehensive travel and events discovery application using Java/XML with Android SDK, implementing event search algorithms, ticket purchasing workflows, and itinerary planning systems. Developed responsive UI components using RecyclerView adapters, ViewPager2, and custom Fragment architectures, translating Figma designs into Material Design components. Established comprehensive testing frameworks with JUnit, Espresso, and Mockito, achieving 85%+ code coverage, and implemented MVVM architectural pattern with Dagger2 dependency injection.",
   },
   {
-    title: "Web Developer",
-    company: "Golden Serenity Homecare",
-    period: "Nov 2024 – Feb 2025",
+    title: "AI Trainer",
+    company: "Meta AI",
+    period: "Jul 2024 - Sep 2024",
     description:
-      "Designed and developed a responsive website for a healthcare organization focused on homecare services. Built using HTML, CSS, and JavaScript, the site showcases available services and enhances outreach for prospective clients. Delivered a clean, accessible frontend aligned with the brand’s mission.",
+      "Collected, curated, and annotated image datasets to improve AI model training accuracy and performance. Verified AI-generated labels to improve training accuracy and ensure high-quality dataset standards. Recorded voice data for AI model training on Ray-Ban smart glasses, contributing to enhanced speech recognition capabilities across different dialects and languages.",
   },
   {
-    title: "Web Developer",
-    company: "Pettify Landing Page",
-    period: "Dec 2024 - Jan 2025",
+    title: "Software Developer (Intern)",
+    company: "ALX Africa",
+    period: "Jan 2021 - Nov 2021",
     description:
-      "Crafted a sleek, responsive landing page for Pettify using modern web technologies. Focused on smooth UI animations, accessibility, and responsive layouts that adapt seamlessly across screen sizes.",
+      "Built backend microservices using Spring Boot and API Gateway for routing and service orchestration, improving system scalability and maintainability. Created reusable UI components and supported frontend consistency across multiple application modules. Ran system stress tests to ensure service reliability and optimal performance under various load conditions.",
   },
 ];
 

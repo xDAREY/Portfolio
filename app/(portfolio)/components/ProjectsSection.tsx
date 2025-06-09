@@ -43,6 +43,15 @@ const webProjects = [
 ];
 
 const mobileProjects = [
+    {
+    title: "CoEdit — Collaborative Text Editor",
+    description:
+      "A production-ready real-time collaborative text editor using Flutter, Riverpod state management, and Firebase Cloud Firestore that enables simultaneous multi-user editing with reliable synchronization and low latency. Implemented intelligent diff-merge algorithms with conflict resolution and architected responsive UI with adaptive layouts.",
+    tools: ["Flutter", "Dart", "Riverpod", "Firebase Firestore", "Real-time Sync"],
+    github: "https://github.com/xDAREY/coedit",
+    livePreview: "https://drive.google.com/file/d/1c2iMy3dFsdh0B3aL8dpHu5DM9Y_3RHpU/view?usp=drive_link",
+    featured: true,
+  },
   {
     title: "3D Controlla",
     description:
@@ -70,14 +79,14 @@ const mobileProjects = [
     title: "Pettify Mobile",
     description:
       "A fully functional pet e-commerce mobile application built with Dart and Flutter.",
-    tools: ["Flutter", "Dart"],
+    tools: ["Flutter", "Dart", "State Management"],
     livePreview: null,
   },
   {
     title: "Flex Mobile",
     description:
       "A comprehensive travel and event management platform that simplifies planning vacations, booking attraction tickets, securing accommodations, and arranging transportation for users.",
-    tools: ["Java", "Firebase"],
+    tools: ["Java", "XML", "Android SDK", "Firebase"],
     livePreview: null,
   },
   {

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaWhatsapp, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export default function HeroSection() {
-  const resumeDriveLink = "https://drive.google.com/file/d/1Th1SrENIiuyC1g54q7qvN7pwbw6FjPBT/view?usp=sharing";
+  const resumeDriveLink = "https://drive.google.com/file/d/1f97FxqTZVOExys76GaiyVVQ1VeQ07qBU/view?usp=sharing";
   
   const handleDownloadClick = async () => {
     try {
